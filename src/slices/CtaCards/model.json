@@ -1,0 +1,89 @@
+{
+  "id": "cta_section",
+  "type": "SharedSlice",
+  "name": "CtaCards",
+  "description": "CtaSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem de background",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Título",
+            "placeholder": "Ex: Aqui, a escolha é sua",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4"
+          }
+        },
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "repeat": true,
+            "fields": {
+              "card_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Imagem do card",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "card_title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Titulo do card",
+                  "placeholder": "Ex: Seja um Líder Lex",
+                  "allowTargetBlank": true,
+                  "multi": "heading3,heading4,heading5,strong,em,hyperlink"
+                }
+              },
+              "card_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Descrição do card",
+                  "placeholder": "Texto decritivo do card ",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,o-list-item,list-item,strong,em,hyperlink"
+                }
+              },
+              "cta_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Texto CTA",
+                  "placeholder": "Ex: Quero ser um Cliente Lex"
+                }
+              },
+              "cta_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link CTA",
+                  "placeholder": "Ex: www.google.com",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": false,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

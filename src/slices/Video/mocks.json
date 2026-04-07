@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"video": {
+				"__TYPE__": "LinkContent",
+				"key": "a174ed79-e801-4d7d-bebc-69d629a4470c",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0"
+				}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Official"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure consectetur fugiat duis adipisicing aute nostrud adipisicing id in Lorem ex tempor cillum commodo. Reprehenderit laboris occaecat nostrud occaecat magna dolor ad id incididunt ex in. Lorem officia voluptate qui commodo enim culpa cupidatat adipisicing adipisicing fugiat nulla non dolor."
+						}
+					}
+				]
+			},
+			"cta_text": {
+				"__TYPE__": "FieldContent",
+				"value": "stairs",
+				"type": "Text"
+			},
+			"cta_link": {
+				"key": "3f0cf3c7-e738-4b28-a8ed-34365190b429",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			}
+		},
+		"items": []
+	}
+]

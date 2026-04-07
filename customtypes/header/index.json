@@ -1,0 +1,58 @@
+{
+  "format": "custom",
+  "id": "header",
+  "label": "Header ",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "nav_menu": {
+        "type": "Group",
+        "config": {
+          "label": "Menu de Navegaçao",
+          "repeat": true,
+          "fields": {
+            "menu_item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Item do menu",
+                "placeholder": "Ex: Ínicio",
+                "allowTargetBlank": true,
+                "multi": "paragraph,strong,hyperlink"
+              }
+            },
+            "menu_anchor": {
+              "type": "Text",
+              "config": {
+                "label": "Ancora",
+                "placeholder": "Ex: #inicio"
+              }
+            }
+          }
+        }
+      },
+      "cta": {
+        "type": "Text",
+        "config": {
+          "label": "CTA",
+          "placeholder": "Ex: Portal do cliente"
+        }
+      },
+      "cta_link": {
+        "type": "Text",
+        "config": {
+          "label": "Link do CTA",
+          "placeholder": "Ex: www.google.com"
+        }
+      }
+    }
+  }
+}

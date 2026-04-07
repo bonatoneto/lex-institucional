@@ -1,0 +1,64 @@
+{
+  "id": "video",
+  "type": "SharedSlice",
+  "name": "Video",
+  "description": "Video",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "video": {
+          "type": "Link",
+          "config": {
+            "label": "Video",
+            "placeholder": "",
+            "select": "media",
+            "allowText": false
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Título",
+            "placeholder": "Ex: Conheça o Grupo por trás das engrenagens da Lex",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Descrição",
+            "placeholder": "Ex: Somos apaixonados em resolver o difícil para você não precisar.",
+            "allowTargetBlank": true,
+            "multi": "paragraph,hyperlink,em,strong,o-list-item,list-item"
+          }
+        },
+        "cta_text": {
+          "type": "Text",
+          "config": {
+            "label": "Texto do CTA",
+            "placeholder": "Ex: Conheça o time Alexandria"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "Link do CTA",
+            "placeholder": "ex: www.google.com",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": false,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

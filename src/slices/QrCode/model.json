@@ -1,0 +1,87 @@
+{
+  "id": "qr_code",
+  "type": "SharedSlice",
+  "name": "QrCode",
+  "description": "QrCode",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem de background",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titulo",
+            "placeholder": "Ex: Baixe o aplicativo",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4,strong,em"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Descrição",
+            "placeholder": "Ex: Disponível para iOS e Android.  ",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "qr_codes": {
+          "type": "Group",
+          "config": {
+            "label": "Códigos QR",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Título",
+                  "placeholder": "Ex: Baixe nosso app",
+                  "allowTargetBlank": true,
+                  "multi": "heading3,heading4,heading5,strong,em,hyperlink"
+                }
+              },
+              "app_store": {
+                "type": "Image",
+                "config": {
+                  "label": "App Store",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "playstore": {
+                "type": "Image",
+                "config": {
+                  "label": "PlayStore",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "qr_code": {
+                "type": "Image",
+                "config": {
+                  "label": "Qr Code",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

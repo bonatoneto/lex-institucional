@@ -1,0 +1,63 @@
+{
+  "id": "carrossel",
+  "type": "SharedSlice",
+  "name": "Carrossel",
+  "description": "Carrossel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Título",
+            "placeholder": "Ex: A Lex não é apenas energia por assinatura",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4"
+          }
+        },
+        "carousel": {
+          "type": "Group",
+          "config": {
+            "label": "Carrossel",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Imagem",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "card_title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Título do card",
+                  "placeholder": "Ex: Somos matchmaking",
+                  "allowTargetBlank": true,
+                  "multi": "heading3,heading4,heading5,strong,em"
+                }
+              },
+              "card_text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Texto do card",
+                  "placeholder": "Ex: Texto descritivo do card",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em,list-item,o-list-item,hyperlink"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

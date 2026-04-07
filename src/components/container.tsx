@@ -1,0 +1,22 @@
+import { cn } from "@/lib/utils";
+
+type GridContainerProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export default function GridContainer({
+  children,
+  className,
+}: GridContainerProps) {
+  return (
+    <div
+      className={cn(
+        "grid grid-cols-12 mx-auto w-full px-4 lg:px-32",
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+}

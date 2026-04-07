@@ -1,0 +1,70 @@
+{
+  "id": "mockup",
+  "type": "SharedSlice",
+  "name": "Mockup",
+  "description": "Mockup",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem de background",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Título",
+            "placeholder": "Ex: Não vendemos energia.",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4,strong,em,hyperlink"
+          }
+        },
+        "gradient_image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem gradiente para a descrição",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Descrição",
+            "placeholder": "Ex: Texto descritivo do que se trata a seção ",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading4,heading5,heading6,strong,em,o-list-item,list-item,hyperlink"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Texto",
+            "placeholder": "Ex: Textos separado por quebra de linhas",
+            "allowTargetBlank": true,
+            "multi": "paragraph,list-item,o-list-item,strong,em,hyperlink"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

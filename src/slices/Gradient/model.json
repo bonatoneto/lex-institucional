@@ -1,0 +1,98 @@
+{
+  "id": "ecossistema",
+  "type": "SharedSlice",
+  "name": "Gradient",
+  "description": "Ecossistema",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem de background",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titulo",
+            "placeholder": "Ex: A Lex é um ecossistema.",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4,strong"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Texto",
+            "placeholder": "Texto descritivo da seção",
+            "allowTargetBlank": true,
+            "multi": "paragraph,o-list-item,list-item,hyperlink,strong,em"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "secondary",
+      "name": "Secondary",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem de background",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titulo",
+            "placeholder": "Ex: A Lex é um ecossistema.",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4,strong"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Texto",
+            "placeholder": "Texto descritivo da seção",
+            "allowTargetBlank": true,
+            "multi": "paragraph,o-list-item,list-item,hyperlink,strong,em"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
