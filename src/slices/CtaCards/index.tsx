@@ -4,7 +4,8 @@ import { FC, useState } from "react";
 
 import AnimateOnView from "@/components/animate-on-view";
 import GridContainer from "@/components/container";
-import CTAButton from "@/components/cta-button";
+import CtaCardDesktop from "@/components/cta-card/cta-card-desktop";
+import CtaCardMobile from "@/components/cta-card/cta-card-mobile";
 import Divider from "@/components/divider";
 
 import { Content } from "@prismicio/client";
@@ -18,9 +19,10 @@ const CtaSection: FC<CtaSectionProps> = ({ slice }) => {
 
   return (
     <section
+      id={slice.slice_type}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="relative py-32"
+      className="relative py-13 lg:py-32"
     >
       <PrismicNextImage
         className="absolute inset-0 h-full"
@@ -28,18 +30,32 @@ const CtaSection: FC<CtaSectionProps> = ({ slice }) => {
         fallbackAlt=""
       />
       <GridContainer>
-        <div className="relative col-start-1 col-end-7 flex flex-col w-full">
+        <div className="relative col-start-1 col-end-13 lg:col-end-7 flex flex-col w-full items-center lg:items-start">
           <AnimateOnView delay={0}>
-            <div className="font-baloo text-5xl font-semibold text-dark mb-12">
+            <div className="font-baloo text-[2rem] lg:text-5xl font-semibold text-dark mb-8 lg:mb-12">
               <PrismicRichText field={slice.primary.title} />
             </div>
           </AnimateOnView>
-          <AnimateOnView delay={0.15}>
+          <AnimateOnView
+            delay={0.15}
+            className="flex justify-center lg:justify-start w-full"
+          >
             <Divider variant="gradient" />
           </AnimateOnView>
         </div>
+
+        {/* Mobile */}
+        <ul className="col-start-1 col-end-13 flex flex-col gap-4 mt-12 md:hidden">
+          {slice.primary.cards.map((item, index) => (
+            <AnimateOnView key={index} delay={0.3 + index * 0.15}>
+              <CtaCardMobile item={item} />
+            </AnimateOnView>
+          ))}
+        </ul>
+
+        {/* Desktop */}
         <ul
-          className="col-start-1 col-end-13 flex items-center justify-center gap-4 mt-12"
+          className="col-start-1 col-end-13 hidden md:flex items-center justify-center gap-4 mt-12"
           onMouseLeave={() => setActiveCard(1)}
         >
           {slice.primary.cards.map((item, index) => (
@@ -48,39 +64,11 @@ const CtaSection: FC<CtaSectionProps> = ({ slice }) => {
               delay={0.3 + index * 0.15}
               className="flex-1 min-w-[calc(33.333%-1rem)]"
             >
-              <li
-                className="relative overflow-hidden transition-all duration-300 ease-in-out w-full"
-                style={{
-                  height: activeCard === index ? "428px" : "352px",
-                }}
+              <CtaCardDesktop
+                item={item}
+                active={activeCard === index}
                 onMouseEnter={() => setActiveCard(index)}
-              >
-                <PrismicNextImage
-                  field={item.card_image}
-                  className="w-full h-full object-cover rounded-[52px]"
-                  sizes="322px"
-                  quality={100}
-                  fallbackAlt=""
-                />
-                <div className="absolute inset-0 bg-black opacity-20 rounded-[52px]"></div>
-                <div className="absolute inset-0 w-full flex flex-col justify-end gap-6 px-6 py-13 text-white">
-                  <div className="font-baloo text-[1.75rem] leading-none font-bold text-center">
-                    <PrismicRichText field={item.card_title} />
-                  </div>
-                  {activeCard === index && (
-                    <AnimateOnView>
-                      <div className="font-nunito text-lg tracking-[0.48px] text-center">
-                        <PrismicRichText field={item.card_description} />
-                      </div>
-                    </AnimateOnView>
-                  )}
-                  <div className="max-w-3xs mx-auto">
-                    <CTAButton href={item.cta_link.text ?? ""} variant="orange">
-                      {item.cta_text}
-                    </CTAButton>
-                  </div>
-                </div>
-              </li>
+              />
             </AnimateOnView>
           ))}
         </ul>

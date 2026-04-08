@@ -326,15 +326,21 @@ interface HeaderDocumentData {
   cta: prismic.KeyTextField;
 
   /**
-   * Link do CTA field in *Header *
+   * CTA Link field in *Header *
    *
-   * - **Field Type**: Text
-   * - **Placeholder**: Ex: www.google.com
+   * - **Field Type**: Link
+   * - **Placeholder**: Ex:  https://cliente.alexandriaenergia.com/
    * - **API ID Path**: header.cta_link
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/fields/text
+   * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  cta_link: prismic.KeyTextField;
+  cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**

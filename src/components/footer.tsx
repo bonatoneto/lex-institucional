@@ -20,10 +20,7 @@ export default function Footer({ data }: FooterProps) {
     >
       {/* Mobile */}
       <div className="flex flex-col items-center gap-8 px-4 py-16 md:hidden">
-        <div className="w-40">
-          <PrismicNextImage field={data.logo} fallbackAlt="" />
-        </div>
-
+        <PrismicNextImage field={data.logo} fallbackAlt="" />
         <div className="flex flex-col items-center gap-2 text-center">
           <div className="font-baloo font-bold text-sm">
             <PrismicRichText field={data.title_address} />
@@ -32,7 +29,6 @@ export default function Footer({ data }: FooterProps) {
             <PrismicRichText field={data.address} />
           </div>
         </div>
-
         <div className="flex flex-col items-center gap-3">
           <div className="font-baloo text-xs font-bold">
             <PrismicRichText field={data.social_media_title} />
@@ -51,7 +47,6 @@ export default function Footer({ data }: FooterProps) {
             ))}
           </ul>
         </div>
-
         {data.selos.map((item, index) => (
           <PrismicNextImage
             key={index}
@@ -60,13 +55,10 @@ export default function Footer({ data }: FooterProps) {
             fallbackAlt=""
           />
         ))}
-
         <div className="h-px w-full bg-[#B3B3B3] mt-18" />
-
         <div className="font-nunito text-xs text-white/60 text-center">
           <PrismicRichText field={data.copyright_text} />
         </div>
-
         <div className="flex items-center gap-6">
           {data.links_externos.map((item, index) => (
             <PrismicNextLink
@@ -112,7 +104,6 @@ export default function Footer({ data }: FooterProps) {
               </ul>
             </div>
           </div>
-
           <div className="col-start-11 col-end-13 flex flex-col items-end gap-4">
             <div className="font-baloo font-bold text-sm text-right">
               <PrismicRichText field={data.title_address} />

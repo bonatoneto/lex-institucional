@@ -23,11 +23,11 @@ export default function CarouselMobile({ items }: CarouselMobileProps) {
             className="w-full h-full object-cover"
             fallbackAlt=""
           />
-          <div className="absolute inset-0 z-10 flex flex-col justify-end py-8 px-5 text-white bg-black/20">
-            <div className="font-baloo font-bold text-xl">
+          <div className="absolute inset-0 z-10 flex flex-col justify-end gap-4 py-8 px-5 text-white bg-black/50">
+            <div className="font-baloo font-bold text-2xl leading-none">
               <PrismicRichText field={item.card_title} />
             </div>
-            <div className="font-nunito text-sm">
+            <div className="font-nunito text-base">
               <PrismicRichText field={item.card_text} />
             </div>
           </div>

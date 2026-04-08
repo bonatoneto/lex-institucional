@@ -1,10 +1,10 @@
-import { ComponentProps } from "react";
-
 import { cn } from "@/lib/utils";
+import { LinkField } from "@prismicio/client";
+import { PrismicNextLink } from "@prismicio/next";
 import { tv, VariantProps } from "tailwind-variants";
 
 const ctaButton = tv({
-  base: "inline-flex items-center w-full justify-center rounded-full px-8 py-3 font-nunito font-semibold text-sm transition-opacity hover:opacity-90",
+  base: "inline-flex items-center w-full justify-center rounded-full px-8 py-3 font-nunito font-semibold text-sm transition-opacity hover:opacity-90 text-nowrap",
   variants: {
     variant: {
       white: "bg-white text-dark",
@@ -17,11 +17,11 @@ const ctaButton = tv({
   },
 });
 
-type CTAButtonProps = ComponentProps<"a"> &
-  VariantProps<typeof ctaButton> & {
-    children: React.ReactNode;
-    href: string;
-  };
+type CTAButtonProps = VariantProps<typeof ctaButton> & {
+  children: React.ReactNode;
+  href: LinkField;
+  className?: string;
+};
 
 export default function CTAButton({
   children,
@@ -31,8 +31,12 @@ export default function CTAButton({
   ...props
 }: CTAButtonProps) {
   return (
-    <a href={href} className={cn(ctaButton({ variant }), className)} {...props}>
+    <PrismicNextLink
+      field={href}
+      className={cn(ctaButton({ variant }), className)}
+      {...props}
+    >
       {children}
-    </a>
+    </PrismicNextLink>
   );
 }

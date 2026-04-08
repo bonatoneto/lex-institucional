@@ -13,7 +13,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 const Hero: FC<HeroProps> = ({ slice }) => {
   return (
     <section
-      id="inicio"
+      id={slice.slice_type}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="relative min-h-dvh w-full overflow-hidden"
@@ -27,26 +27,27 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         />
         <PrismicNextImage
           field={slice.primary.addon_image}
-          className="absolute inset-0 h-full md:min-h-dvh object-cover rotate-90 md:rotate-0 w-ful overflow-visible z-20 bottom-0 top-0"
+          className="absolute inset-0 h-full lg:min-h-dvh object-cover rotate-90 lg:rotate-0 min-w-full overflow-visible z-20 bottom-0 top-0"
           fallbackAlt=""
           preload
         />
 
         <PrismicNextImage
           field={slice.primary.image_principal}
-          className="absolute h-full md:h-dvh w-full z-30 inset-0 object-bottom object-contain md:object-right right-0 top-0 scale-75 sm:scale-85 md:scale-100 origin-bottom"
+          // className="absolute h-full md:h-dvh w-full z-30 inset-0 object-bottom object-contain md:object-right right-0 top-0 sm:scale-85 md:scale-100 origin-bottom"
+          className="absolute h-full lg:h-dvh bottom-0 z-30 object-bottom object-contain lg:object-right inset-x-0 mx-auto lg:mx-0 lg:right-0 lg:left-auto max-w-96 max-h-[484px] lg:max-w-full lg:max-h-full lg:scale-100 origin-bottom"
           fallbackAlt=""
           preload
         />
       </div>
       {/* Mobile text */}
-      <div className="md:hidden relative z-40 flex flex-col justify-start gap-8 px-6 pt-32 pb-8 text-dark min-h-dvh">
+      <div className="lg:hidden relative z-40 flex flex-col justify-start gap-8 px-6 pt-32 pb-8 text-dark text-center min-h-dvh">
         <AnimateOnView delay={0}>
-          <div className="font-baloo text-[3rem] leading-none font-semibold">
+          <div className="font-baloo text-4xl leading-none font-semibold">
             <PrismicRichText field={slice.primary.title} />
           </div>
         </AnimateOnView>
-        <AnimateOnView delay={0.15}>
+        <AnimateOnView delay={0.15} className="flex w-full justify-center">
           <Divider variant="gradient" />
         </AnimateOnView>
         <AnimateOnView delay={0.3}>
@@ -55,14 +56,17 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </div>
         </AnimateOnView>
       </div>
-      <GridContainer>
-        <div className="hidden relative z-40 md:flex flex-col justify-center gap-13 col-start-1 min-h-dvh col-end-13 lg:col-end-6 text-dark text-center lg:text-left">
+      <GridContainer className="hidden lg:grid">
+        <div className="relative z-40 md:flex flex-col justify-center gap-13 col-start-1 min-h-dvh col-end-13 lg:col-end-6 text-dark text-center lg:text-left">
           <AnimateOnView delay={0}>
             <div className="font-baloo text-[4rem] leading-none font-semibold">
               <PrismicRichText field={slice.primary.title} />
             </div>
           </AnimateOnView>
-          <AnimateOnView delay={0.15} className="flex w-full justify-center">
+          <AnimateOnView
+            delay={0.15}
+            className="flex w-full justify-center lg:justify-start"
+          >
             <Divider variant="gradient" />
           </AnimateOnView>
           <AnimateOnView delay={0.3}>

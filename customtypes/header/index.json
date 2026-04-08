@@ -47,10 +47,14 @@
         }
       },
       "cta_link": {
-        "type": "Text",
+        "type": "Link",
         "config": {
-          "label": "Link do CTA",
-          "placeholder": "Ex: www.google.com"
+          "label": "CTA Link",
+          "placeholder": "Ex:  https://cliente.alexandriaenergia.com/",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": false,
+          "repeat": false
         }
       }
     }
